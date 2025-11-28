@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NCHS Admission Form">
+<meta name="author" content="NCHS">
+<meta name="keywords" content="Admission, Form, ABC School">
+
+<title>Nazirhat Collegiate High School| Admission</title>
+
+<!-- Favicon -->
+<link rel="icon" href="https://via.placeholder.com/32x32.png" type="image/png">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Nazirhat Collegiate High School</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="students.html">Students</a></li>
+        <li class="nav-item"><a class="nav-link" href="teachers.html">Teachers</a></li>
+        <li class="nav-item"><a class="nav-link active" href="admission.html">Admission</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<header class="text-center py-5 bg-light">
+  <h1 class="fw-bold">Admission Form</h1>
+  <p class="lead">Apply online to join Nazirhat Collegiate High School</p>
+</header>
+
+<!-- Admission Form Section -->
+<section class="container my-5">
+  <form id="admissionForm" class="p-4 shadow-sm rounded bg-white">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" class="form-control" placeholder="Enter first name" required pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed">
+      </div>
+      <div class="col-md-6">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" class="form-control" placeholder="Enter last name" required pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed">
+      </div>
+      <div class="col-md-6">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" class="form-control" required>
+      </div>
+      <div class="col-md-6">
+        <label for="class">Class to Apply</label>
+        <select id="class" class="form-select" required>
+          <option selected disabled>Select class</option>
+          <option>Class 6</option>
+          <option>Class 7</option>
+          <option>Class 8</option>
+          <option>Class 9</option>
+          <option>Class 10</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="fatherName">Father's Name</label>
+        <input type="text" id="fatherName" class="form-control" placeholder="Enter father's name" required pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed">
+      </div>
+      <div class="col-md-6">
+        <label for="motherName">Mother's Name</label>
+        <input type="text" id="motherName" class="form-control" placeholder="Enter mother's name" required pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed">
+      </div>
+      <div class="col-md-6">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" class="form-control" placeholder="Enter phone number" pattern="\d+" required>
+      </div>
+      <div class="col-md-6">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="form-control" placeholder="Enter email" required>
+      </div>
+      <div class="col-md-12">
+        <label for="address">Address</label>
+        <textarea id="address" class="form-control" rows="3" placeholder="Enter full address" required></textarea>
+      </div>
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-primary mt-3">Submit Application</button>
+      </div>
+    </div>
+  </form>
+
+  <!-- Success Message -->
+  <div id="successMessage" class="alert alert-success mt-4 text-center d-none">
+    Application submitted successfully!
+  </div>
+
+  <!-- Submitted Info -->
+  <div id="submittedInfo" class="mt-4 d-none">
+    <h4>Submitted Information:</h4>
+    <ul class="list-group">
+      <li class="list-group-item"><strong>First Name:</strong> <span id="infoFirstName"></span></li>
+      <li class="list-group-item"><strong>Last Name:</strong> <span id="infoLastName"></span></li>
+      <li class="list-group-item"><strong>Date of Birth:</strong> <span id="infoDOB"></span></li>
+      <li class="list-group-item"><strong>Class:</strong> <span id="infoClass"></span></li>
+      <li class="list-group-item"><strong>Father's Name:</strong> <span id="infoFatherName"></span></li>
+      <li class="list-group-item"><strong>Mother's Name:</strong> <span id="infoMotherName"></span></li>
+      <li class="list-group-item"><strong>Phone:</strong> <span id="infoPhone"></span></li>
+      <li class="list-group-item"><strong>Email:</strong> <span id="infoEmail"></span></li>
+      <li class="list-group-item"><strong>Address:</strong> <span id="infoAddress"></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-primary text-white text-center py-3 mt-5">
+  <p>&copy; 2025 Nazirhat Collegiate High School. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script>
+document.getElementById('admissionForm').addEventListener('submit', function(e) {
+  e.preventDefault(); // Prevent form submission
+
+  // Get form values
+  const firstName = document.getElementById('firstName').value;
+  const lastName = document.getElementById('lastName').value;
+  const dob = document.getElementById('dob').value;
+  const classApply = document.getElementById('class').value;
+  const fatherName = document.getElementById('fatherName').value;
+  const motherName = document.getElementById('motherName').value;
+  const phone = document.getElementById('phone').value;
+  const email = document.getElementById('email').value;
+  const address = document.getElementById('address').value;
+
+  // Simple phone validation (digits only)
+  if(!/^\d+$/.test(phone)) {
+    alert('Please enter a valid phone number with digits only.');
+    return;
+  }
+
+  // Show success message
+  const successMessage = document.getElementById('successMessage');
+  successMessage.classList.remove('d-none');
+
+  // Fill submitted info
+  document.getElementById('infoFirstName').textContent = firstName;
+  document.getElementById('infoLastName').textContent = lastName;
+  document.getElementById('infoDOB').textContent = dob;
+  document.getElementById('infoClass').textContent = classApply;
+  document.getElementById('infoFatherName').textContent = fatherName;
+  document.getElementById('infoMotherName').textContent = motherName;
+  document.getElementById('infoPhone').textContent = phone;
+  document.getElementById('infoEmail').textContent = email;
+  document.getElementById('infoAddress').textContent = address;
+
+  // Show submitted info section
+  document.getElementById('submittedInfo').classList.remove('d-none');
+
+  // Optionally reset the form
+  this.reset();
+});
+</script>
+
+</body>
+</html>
