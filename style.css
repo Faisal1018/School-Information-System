@@ -1,0 +1,108 @@
+/* ===============================
+   Global Styles
+=============================== */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h4 {
+  color: #1d3557;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===============================
+   Teacher Card Section
+=============================== */
+.teacher-card {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  padding: 25px;
+}
+
+.teacher-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+}
+
+/* Circular Profile Image */
+.teacher-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #007bff;
+  display: block;
+  margin: 0 auto 15px auto;
+  transition: 0.4s;
+}
+
+.teacher-card:hover .teacher-img {
+  transform: scale(1.05);
+  border-color: #0056b3;
+}
+
+/* Name and Role */
+.teacher-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.teacher-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Button Styling */
+.teacher-card .btn {
+  padding: 8px 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  transition: 0.3s;
+}
+
+.teacher-card .btn-primary {
+  background: #1d3557;
+  border: 2px solid #1d3557;
+}
+
+.teacher-card .btn-primary:hover {
+  background: #457b9d;
+  border-color: #457b9d;
+}
+
+/* ===============================
+   Footer
+=============================== */
+footer {
+  background: #1d3557;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.95rem;
+}
+
+/* ===============================
+   Responsive
+=============================== */
+@media (max-width: 768px) {
+  .teacher-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .teacher-img {
+    width: 100px;
+    height: 100px;
+  }
+}
